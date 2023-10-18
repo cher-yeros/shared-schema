@@ -35,12 +35,15 @@ class Product extends Model<ProductType, ProductCreationAttributes> {
     type: DataType.STRING,
     allowNull: false,
   })
+<<<<<<< HEAD
+=======
   serialNo!: string;
 
   @Column({
     type: DataType.STRING,
     allowNull: false,
   })
+>>>>>>> c60da7b0fca1e9f7b3c56b0dfc125939854784be
   name!: string;
 
   @Column({
