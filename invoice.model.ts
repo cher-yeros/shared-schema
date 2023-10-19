@@ -3,12 +3,13 @@ import {
   Column,
   DataType,
   Default,
+  ForeignKey,
   PrimaryKey,
   Table,
 } from "sequelize-typescript";
 import { v4 as uuidv4 } from "uuid";
 import { PaymentType } from "./payment.model";
-import { UserType } from "./user.model";
+import User, { UserType } from "./user.model";
 
 export interface InvoiceType {
   id: string;
@@ -28,6 +29,10 @@ class Invoice extends Model<InvoiceType, InvoiceCreationAttributes> {
 
   @Column(DataType.STRING)
   invoiceNo!: string;
+
+  @ForeignKey(() => User)
+  @Column(DataType.STRING)
+  userId!: string;
 }
 
 export default Invoice;
