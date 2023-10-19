@@ -54,12 +54,6 @@ var User = /** @class */ (function (_super) {
             type: sequelize_typescript_1.DataType.STRING,
             allowNull: false
         })
-    ], User.prototype, "phone");
-    __decorate([
-        sequelize_typescript_1.Column({
-            type: sequelize_typescript_1.DataType.STRING,
-            allowNull: false
-        })
     ], User.prototype, "password");
     __decorate([
         sequelize_typescript_1.HasMany(function () { return product_model_1["default"]; })
