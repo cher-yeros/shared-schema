@@ -11,7 +11,6 @@ export interface UserType {
   name: string;
   email: string;
   password: string;
-  phone: string;
   products?: ProductType[];
   orders?: OrderType[];
   notifications?: NotificationType[];
@@ -40,12 +39,6 @@ class User extends Model<UserType, UserCreationAttributes> {
     allowNull: false,
   })
   email!: string;
-
-  @Column({
-    type: DataType.STRING,
-    allowNull: false,
-  })
-  phone!: string;
 
   @Column({
     type: DataType.STRING,
